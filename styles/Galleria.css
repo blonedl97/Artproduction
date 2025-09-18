@@ -680,3 +680,41 @@ body {
     color: #9ca3af;
 }
 
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #4b5563;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+    background: #f3f4f6;
+    color: #1e3a8a;
+}
+
+.nav-mobile {
+    display: none;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    padding: 1rem 0;
+}
+
+.nav-mobile a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-mobile a:hover {
+    background: #f3f4f6;
+    color: #1e3a8a;
+}
