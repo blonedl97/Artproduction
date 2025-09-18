@@ -658,6 +658,7 @@ body {
     color: #d1d5db;
     border-radius: 8px;
     text-decoration: none;
+    transition: all 0.3 ease;
 }
 
 .contact-item {
@@ -678,3 +679,4 @@ body {
     text-align: center;
     color: #9ca3af;
 }
+
