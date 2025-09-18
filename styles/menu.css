@@ -1,0 +1,124 @@
+/* Variables couleurs Home */
+:root {
+  --bg: #140019;
+  --card: #2a1032;
+  --text: #f3e8ff;
+  --muted: #c8a8d8;
+  --accent: #d86bff;
+  --ring: rgba(216, 107, 255, 0.35);
+}
+
+/* Header / Navbar */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(180deg, rgba(40,0,60,0.9), rgba(20,0,30,0.7));
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+.title .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px var(--ring);
+}
+
+.nav-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.nav-links a {
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text);
+  background: linear-gradient(180deg, #521266, #2a1032);
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--ring);
+  transform: translateY(-2px);
+}
+
+/* Responsive - menu mobile */
+@media (max-width: 900px) {
+  .nav-links {
+    flex-direction: column;
+    display: none;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text);
+    cursor: pointer;
+  }
+}
+
+/* Boutons de filtrage */
+.controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+button.filter {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  background: linear-gradient(180deg, #521266, #2a1032);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: 0.2s;
+}
+
+button.filter[aria-pressed="true"],
+button.filter:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--ring);
+  transform: translateY(-2px);
+}

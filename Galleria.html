@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artproduction - Galleria Quaderni</title>
+    <link rel="stylesheet" href="styles/Galleria.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="window.location.href='index.html'">
+                    <i class="fas fa-book-open"></i>
+                    <h1>Art Production</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" onclick="navigateToSection('home')">Home</a>
+                        <a href="index.html#products" onclick="navigateToSection('products')">Prodotti</a>
+                        <a href="Galleria.html" onclick="navigateToSection('gallery')">Galleria</a>
+                        <a href="quote.html" onclick="navigateToSection('quote')">Preventivo</a>
+                        <a href="index.html#faq" onclick="navigateToSection('home')">FAQ</a>
+                        <a href="index.html#contact" onclick="navigateToSection('Contatti')">Contatti</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">La Nostra Collezione di Quaderni</h2>
+                <p class="hero-subtitle">Scopri la nostra gamma di quaderni artistici e creativi per ogni esigenza</p>
+                <button class="hero-cta">Vedi tutti i quaderni</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="galleria">
+        <div class="container">
+            <!-- Filters -->
+            <div class="filters">
+                <h3 class="filters-title">Categorie</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Tutti</button>
+                    <button class="filter-btn" data-filter="righe">A Righe</button>
+                    <button class="filter-btn" data-filter="quadretti">A Quadretti</button>
+                    <button class="filter-btn" data-filter="bianco">Bianco</button>
+                    <button class="filter-btn" data-filter="artistico">Artistico</button>
+                    <button class="filter-btn" data-filter="premium">Premium</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="righe">
+                    <img src="https://images.pexels.com/photos/159751/book-address-book-learning-learn-159751.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Quaderno a righe classico" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Quaderno a Righe Classico</h4>
+                        <p>Perfetto per la scrittura</p>
+                        <button class="view-btn" data-image="https://images.pexels.com/photos/159751/book-address-book-learning-learn-159751.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop">Vedi</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="quadretti">
+                    <img src="https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Quaderno a quadretti matematica" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Quaderno a Quadretti</h4>
+                        <p>Ideale per matematica</p>
+                        <button class="view-btn" data-image="https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop">Vedi</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="artistico">
+                    <img src="https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Quaderno artistico disegno" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Quaderno Artistico</h4>
+                        <p>Per disegno e creatività</p>
+                        <button class="view-btn" data-image="https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop">Vedi</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="bianco">
+                    <img src="https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Quaderno bianco minimalista" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Quaderno Bianco</h4>
+                        <p>Design minimalista</p>
+                        <button class="view-btn" data-image="https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop">Vedi</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="premium">
+                    <img src="https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Quaderno premium pelle" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Quaderno Premium</h4>
+                        <p>Rilegatura in pelle</p>
+                        <button class="view-btn" data-image="https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop">Vedi</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="righe">
+                    <img src="https://images.pexels.com/photos/1925536/pexels-photo-1925536.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Quaderno righe colorate" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Quaderno Righe Colorate</h4>
+                        <p>Design vivace e moderno</p>
+                        <button class="view-btn" data-image="https://images.pexels.com/photos/1925536/pexels-photo-1925536.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop">Vedi</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="quadretti">
+                    <img src="https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Quaderno quadretti scuola" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Quaderno Scuola</h4>
+                        <p>Quadretti per studenti</p>
+                        <button class="view-btn" data-image="https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop">Vedi</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="artistico">
+                    <img src="https://images.pexels.com/photos/1194420/pexels-photo-1194420.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Quaderno sketch artistico" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Quaderno Sketch</h4>
+                        <p>Carta speciale per arte</p>
+                        <button class="view-btn" data-image="https://images.pexels.com/photos/1194420/pexels-photo-1194420.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop">Vedi</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="bianco">
+                    <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Quaderno bianco elegante" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Quaderno Elegante</h4>
+                        <p>Stile professionale</p>
+                        <button class="view-btn" data-image="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop">Vedi</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="premium">
+                    <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Quaderno premium lusso" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Quaderno di Lusso</h4>
+                        <p>Qualità superiore</p>
+                        <button class="view-btn" data-image="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop">Vedi</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="righe">
+                    <img src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Quaderno righe vintage" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Quaderno Vintage</h4>
+                        <p>Stile retrò raffinato</p>
+                        <button class="view-btn" data-image="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop">Vedi</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="artistico">
+                    <img src="https://images.pexels.com/photos/1020315/pexels-photo-1020315.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Quaderno arte creativa" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Quaderno Arte Creativa</h4>
+                        <p>Per progetti artistici</p>
+                        <button class="view-btn" data-image="https://images.pexels.com/photos/1020315/pexels-photo-1020315.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop">Vedi</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="load-more-btn">Carica altri quaderni</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <img class="lightbox-image" src="" alt="">
+            <div class="lightbox-controls">
+                <button class="lightbox-prev">&#8249;</button>
+                <button class="lightbox-next">&#8250;</button>
+            </div>
+        </div>
+    </div>
+ 
+    
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-company">
+                    <div class="footer-logo">
+                        <i class="fas fa-book-open"></i>
+                        <span>Art Production</span>
+                    </div>
+                    <p data-translate="footer.description">
+                        Art Production è la vostra stamperia di fiducia in Emilia-Romagna, specializzata in libri e quaderni per l'educazione.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:info@art-production.it"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3 data-translate="footer.quickLinks">Link Rapidi</h3>
+                    <ul>
+                        <li><a href="index.html#home" onclick="navigateToSection('home')">Home</a></li>
+                        <li><a href="index.html#products" onclick="navigateToSection('products')">Prodotti</a></li>
+                        <li><a href="Galleria.html" onclick="navigateToSection('gallery')">Galleria</a></li>
+                        <li><a href="quote.html" onclick="navigateToSection('quote')">Preventivo</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contatti</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+39 051 123 4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@art-production.it</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Art Production. <span data-translate="footer.rights">Tutti i diritti riservati.</span></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Footer --><!--
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">Art production</h3>
+                    <p class="footer-description">Produzione artigianale di quaderni e articoli di cartoleria di qualità superiore.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Prodotti</h4>
+                    <ul>
+                        <li><a href="#">Quaderni a Righe</a></li>
+                        <li><a href="#">Quaderni a Quadretti</a></li>
+                        <li><a href="#">Quaderni Artistici</a></li>
+                        <li><a href="#">Collezione Premium</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Email: contact@artproduction.com</li>
+                        <li>Telefono: +39 051 123 4567</li>
+                        <li>Indirizzo: Milano, Italia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Art Production. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer> -->
+
+    <script src="js/Galleria.js"></script>
+</body>
+</html>

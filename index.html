@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Production - Stamperia per Scuole | Emilia-Romagna</title>
+    <meta name="description" content="Art Production - Stamperia specializzata in libri e quaderni per scuole in Emilia-Romagna, Italia">
+    <meta name="keywords" content="stamperia, libri, quaderni, scuole, Emilia-Romagna, Bologna, Italia, stampa, editoria">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="navigateToSection('home')">
+                    <i class="fas fa-book-open"></i>
+                    <span>Art Production</span>
+                </div>
+                
+                <nav class="nav-desktop">
+                    <a href="#home" onclick="navigateToSection('home')" data-section="home">Home</a>
+                    <a href="#products" onclick="navigateToSection('products')" data-section="products">Prodotti</a>
+                  <a href="Galleria.html" onclick="navigateToSection('gallery')" data-section="gallery">Galleria</a>
+                    <a href="quote.html" onclick="navigateToSection('quote')" data-section="quote">Preventivo</a>
+                    <a href="#faq" onclick="navigateToSection('faq')" data-section="faq">FAQ</a>
+                    <a href="#contact" onclick="navigateToSection('contact')" data-section="contact">Contatti</a>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="lang-btn" onclick="toggleLanguageMenu()">
+                            <i class="fas fa-globe"></i>
+                            <span id="current-flag">🇮🇹</span>
+                        </button>
+                        <div class="lang-menu" id="langMenu">
+                            <button onclick="changeLanguage('it')">🇮🇹 Italiano</button>
+                            <button onclick="changeLanguage('en')">🇬🇧 English</button>
+                            <button onclick="changeLanguage('fr')">🇫🇷 Français</button>
+                        </div>
+                    </div>
+                    
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="nav-mobile" id="mobileNav">
+                <a href="#home" onclick="navigateToSection('home'); toggleMobileMenu()">Home</a>
+                <a href="#products" onclick="navigateToSection('products'); toggleMobileMenu()">Prodotti</a>
+                <a href="Galleria.html" onclick="navigateToSection('gallery'); toggleMobileMenu()">Galleria</a>
+                <a href="quote.html" onclick="navigateToSection('quote'); toggleMobileMenu()">Preventivo</a>
+                <a href="#faq" onclick="navigateToSection('faq'); toggleMobileMenu()">FAQ</a>
+                <a href="#contact" onclick="navigateToSection('contact'); toggleMobileMenu()">Contatti</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-slider">
+    <!-- Layer 1 -->
+    <div class="hero-slider">
+  <div class="slider-layer layer1">
+    <img src="https://images.pexels.com/photos/159751/book-address-book-learning-learn-159751.jpeg" alt="Image 1">
+    <img src="https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg" alt="Image 2">
+    <img src="https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg" alt="Image 3">
+    <img src="https://images.pexels.com/photos/1314543/pexels-photo-1314543.jpeg" alt="Image 4">
+    <img src="https://images.pexels.com/photos/1925536/pexels-photo-1925536.jpeg" alt="Image 5">
+    <img src="https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg" alt="Image 6">
+  </div>
+  
+  <!-- Layer2 et Layer3 : mêmes 6 images mais différentes vitesses pour effet parallax -->
+  <div class="slider-layer layer2">
+    <img src="https://images.pexels.com/photos/159751/book-address-book-learning-learn-159751.jpeg" alt="Image 1">
+    <img src="https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg" alt="Image 2">
+    <img src="https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg" alt="Image 3">
+    <img src="https://images.pexels.com/photos/1314543/pexels-photo-1314543.jpeg" alt="Image 4">
+    <img src="https://images.pexels.com/photos/1925536/pexels-photo-1925536.jpeg" alt="Image 5">
+    <img src="https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg" alt="Image 6">
+  </div>
+  
+  <div class="slider-layer layer3">
+    <img src="https://images.pexels.com/photos/159751/book-address-book-learning-learn-159751.jpeg" alt="Image 1">
+    <img src="https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg" alt="Image 2">
+    <img src="https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg" alt="Image 3">
+    <img src="https://images.pexels.com/photos/1314543/pexels-photo-1314543.jpeg" alt="Image 4">
+    <img src="https://images.pexels.com/photos/1925536/pexels-photo-1925536.jpeg" alt="Image 5">
+    <img src="https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg" alt="Image 6">
+  </div>
+</div>
+
+     
+        <!--<div class="hero-background"></div> -->
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-translate="hero.title">Art Production</h1>
+                <p class="hero-subtitle" data-translate="hero.subtitle">
+                    Stampiamo i tuoi sogni educativi. Libri e quaderni di qualità per le scuole dell'Emilia-Romagna.
+                </p>
+                <button class="hero-cta" onclick="navigateToSection('products')" data-translate="hero.cta">
+                    Scopri i nostri prodotti
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+  <section id="products" class="products">
+  <div class="container">
+    <div class="section-header">
+      <h2>I Nostri Prodotti</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="products-grid">
+      <!-- Unlined Products -->
+      <div class="product-card">
+        <div class="card-image">
+          <img src="img/quaderno_unlined_main.jpg" 
+               alt="Quaderni Bianchi" 
+               onclick="openGallery('unlined')">
+        </div>
+        <div class="card-content">
+          <h3>Libri e Quaderni Bianchi</h3>
+          <p>
+            Perfetti per disegno, arte e creatività. Carta di alta qualità per esprimere liberamente le tue idee.
+          </p>
+          <button class="catalog-btn" onclick="showCatalog('unlined')">
+            Visualizza Catalogo <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Lined Products -->
+      <div class="product-card">
+        <div class="card-image">
+          <img src="img/quaderno_lined_main.jpg" 
+               alt="Quaderni Rigati" 
+               onclick="openGallery('lined')">
+        </div>
+        <div class="card-content">
+          <h3>Libri e Quaderni Rigati</h3>
+          <p>
+            Ideali per scrittura e appunti. Righe precise per una scrittura ordinata e professionale.
+          </p>
+          <button class="catalog-btn" onclick="showCatalog('lined')">
+            Visualizza Catalogo <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox per la galleria -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeGallery()">&times;</span>
+  <div class="lightbox-content" id="lightboxContent"></div>
+</div>
+
+ <!-- Modal per Catalogo PDF -->
+<div id="pdfModal" class="pdf-modal">
+  <span class="close" onclick="closePDF()">&times;</span>
+  <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+</div>
+
+   
+    <!-- FAQ Section -->
+    
+    <section id="faq" class="faq">
+  <div class="container">
+    <div class="section-header">
+      <h2>FAQ - Domande Frequenti</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>
+          Quali tipi di prodotti stampate?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </h3>
+        <p>
+          Stampiamo quaderni, cataloghi, volantini, biglietti da visita, manifesti, libri e molto altro. 
+          Offriamo sia stampa digitale che offset.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          Posso ordinare una piccola quantità di copie?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </h3>
+        <p>
+          Sì, grazie alla stampa digitale possiamo gestire anche piccole tirature a prezzi competitivi.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          Quali formati di file accettate?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </h3>
+        <p>
+          Accettiamo principalmente PDF ad alta risoluzione. In alternativa, anche file AI, PSD, PNG e JPG, 
+          purché con qualità di stampa adeguata.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          Fornite anche un servizio di design grafico?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </h3>
+        <p>
+          Sì, il nostro team grafico può aiutarti a creare o adattare il tuo progetto per la stampa.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          Quanto tempo richiede la produzione?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </h3>
+        <p>
+          I tempi dipendono dal tipo di prodotto e dalla quantità. Generalmente, i lavori standard vengono consegnati in 3-5 giorni lavorativi.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          Offrite consegna a domicilio?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </h3>
+        <p>
+          Sì, consegniamo in tutta Italia tramite corriere espresso. Puoi anche ritirare il tuo ordine in sede.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="contact.title">Contattaci</h2>
+                <p data-translate="contact.subtitle">Siamo qui per aiutarti con qualsiasi domanda o richiesta</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-translate="contact.form.name">Nome Completo</label>
+                                <input type="text" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="contact.form.email">Email</label>
+                                <input type="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-translate="contact.form.phone">Telefono</label>
+                                <input type="tel" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="contact.form.subject">Oggetto</label>
+                                <input type="text" name="subject" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-translate="contact.form.message">Messaggio</label>
+                            <textarea name="message" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="contact-btn" data-translate="contact.form.send">
+                            <i class="fas fa-paper-plane"></i>
+                            Invia Messaggio
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>Informazioni di Contatto</h3>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Indirizzo</h4>
+                                <p data-translate="contact.info.address">Via Roma 123, 40121 Bologna, Emilia-Romagna</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefono</h4>
+                                <p data-translate="contact.info.phone">+39 051 123 4567</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p data-translate="contact.info.email">info@art-production.it</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Orari</h4>
+                                <p data-translate="contact.info.hours">Lun-Ven: 8:00-18:00, Sab: 9:00-13:00</p>
+                            </div>
+                        </div>
+                    </div> 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2835.570409091453!2d10.648343599999999!3d44.707968900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47801d1f5e78cbb5%3A0xc2bd3e62586d8606!2sARTPRODUCTION%20-%20ARTSOLUTION!5e0!3m2!1sfr!2sit!4v1758200131171!5m2!1sfr!2sit" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                  <!--  <div class="map-placeholder">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Mappa interattiva</p>
+                        <span>Bologna, Emilia-Romagna</span>
+                    </div>  -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-company">
+                    <div class="footer-logo">
+                        <i class="fas fa-book-open"></i>
+                        <span>Art Production</span>
+                    </div>
+                    <p data-translate="footer.description">
+                        Art Production è la vostra stamperia di fiducia in Emilia-Romagna, specializzata in libri e quaderni per l'educazione.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:info@art-production.it"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3 data-translate="footer.quickLinks">Link Rapidi</h3>
+                    <ul>
+                        <li><a href="#home" onclick="navigateToSection('home')">Home</a></li>
+                        <li><a href="#products" onclick="navigateToSection('products')">Prodotti</a></li>
+                        <li><a href="Galleria.html" onclick="navigateToSection('gallery')">Galleria</a></li>
+                        <li><a href="quote.html" onclick="navigateToSection('quote')">Preventivo</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contatti</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+39 051 123 4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@art-production.it</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Art Production. <span data-translate="footer.rights">Tutti i diritti riservati.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // durée des animations (1s)
+    once: true       // animation seulement une fois
+  });
+</script>
+
+
+
+    <script src="js/translations.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/faq.js"></script>
+
+</body>
+</html>
