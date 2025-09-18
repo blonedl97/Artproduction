@@ -525,6 +525,16 @@
                 <li><a href="index.html#contact">Contatto</a></li>
             </ul>
         </div>
+
+         <!-- Menu mobile -->
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="index.html#products">Prodotti</a>
+    <a href="Galleria.html">Galleria</a>
+    <a href="preventivo.html" class="active">Preventivo</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="index.html#contact">Contatto</a>
+  </div>
     </header>
 
     <!-- Main Content -->
@@ -986,6 +996,14 @@
 
         // Initialize estimation
         updateEstimation();
+
+        
+function toggleMobileMenu() {
+  const menu = document.getElementById("nav-mobile");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+
     </script>
 </body>
 </html>
