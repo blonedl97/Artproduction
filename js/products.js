@@ -302,7 +302,7 @@ function showCatalog(category) {
     if (category === 'unlined') {
         pdfFrame.src = "catalogo_quaderni_CV1.pdf";
     } else if (category === 'lined') {
-        pdfFrame.src = "catalogo_quaderni_SV_lined.pdf";
+        pdfFrame.src = "catalogo_quaderni_SV.pdf";
     }
 
     pdfModal.style.display = "block";

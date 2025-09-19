@@ -405,7 +405,7 @@ function goToProducts() {
 
    // Ouvre le PDF du catalogue
 
- function showCatalog(type) {
+/* function showCatalog(type) {
     let pdfFile = '';
     if(type === 'unlined') pdfFile = 'catalogo_quaderni_CV1.pdf';
     if(type === 'lined') pdfFile = 'catalogo_quaderni_SV.pdf';
