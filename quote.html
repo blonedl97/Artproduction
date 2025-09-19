@@ -530,6 +530,11 @@
   }
 }
 
+.cart-total,
+.cart-summary small {
+    display: none;
+}
+
     </style>
 </head>
 <body>
@@ -564,7 +569,7 @@
     <a href="index.html">Home</a>
     <a href="index.html#products">Prodotti</a>
     <a href="Galleria.html">Galleria</a>
-    <a href="preventivo.html" class="active">Preventivo</a>
+    <a href="quote.html" class="active">Preventivo</a>
     <a href="index.html#faq">FAQ</a>
     <a href="index.html#contact">Contatto</a>
   </div>
@@ -1030,11 +1035,7 @@
         // Initialize estimation
         updateEstimation();
 
-        
-/*function toggleMobileMenu() {
-  const menu = document.getElementById("nav-mobile");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
-} */
+    
 function toggleMobileMenu() {
   const menu = document.getElementById("nav-mobile");
   menu.classList.toggle("show");

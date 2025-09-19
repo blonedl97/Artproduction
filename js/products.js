@@ -100,6 +100,7 @@ const products = [
     }
 ];
 
+
 // ===============================
 // Initialisation
 // ===============================
@@ -223,16 +224,47 @@ function closeModal() {
 // ===============================
 // Galerie Lightbox
 // ===============================
-function openGallery(category) {
+ function openGallery(category) {
     const lightbox = document.getElementById('lightbox');
     const content = document.getElementById('lightboxContent');
     content.innerHTML = "";
 
     let images = [];
     if (category === 'unlined') {
-        images = ["img/quaderno_unlined1.jpg", "img/quaderno_unlined2.jpg", "img/quaderno_unlined3.jpg"];
+        images = [ "https://www.art-production.it/imgs/gallery/19/quad-cv_1a.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_1b.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_2a.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_2b.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_3a.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_3b.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_4a.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_4b.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_5a.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_5b.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_6a.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_6b.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_7a.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_7b.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_8a.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_8b.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_9a.jpg",
+    "https://www.art-production.it/imgs/gallery/19/quad-cv_9b.jpg"];
     } else if (category === 'lined') {
-        images = ["img/quaderno_lined1.jpg", "img/quaderno_lined2.jpg", "img/quaderno_lined3.jpg"];
+        images = [ "https://www.art-production.it/imgs/gallery/20/quad-sv_1a.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_1b.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_2a.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_2b.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_3a.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_3b.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_4a.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_4b.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_5a.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_5b.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_6a.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_6b.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_7a.jpg",
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_7b.jpg"
+];
     }
 
     images.forEach(src => {
@@ -246,11 +278,18 @@ function openGallery(category) {
     });
 
     lightbox.style.display = "flex";
+
+     lightbox.onclick = function(e) {
+        if (e.target === lightbox) closeGallery();
+    }
 }
 
 function closeGallery() {
-    document.getElementById('lightbox').style.display = "none";
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = "none";
 }
+
+
 
 // ===============================
 // Catalogue PDF

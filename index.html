@@ -107,7 +107,7 @@
                 <h1 class="hero-title" data-translate="hero.title">Art Production</h1>
                 <p class="hero-subtitle" data-translate="hero.subtitle">
                     Stampiamo i tuoi sogni educativi. Libri e quaderni di qualità per le scuole Steiner-Waldorf.
-                    
+
                     A disposizione ampio assortimento di quaderni e quadernoni prodotti con carta Fabriano da 115gr.
                      di ottima qualità, in vario formato e dimensioni con copertine tra i 250 e i 300gr. variamente colorate. 
                      Tutta la linea è adatta alla scrittura con inchiostro e stilografica, vi è inoltre la possibilità di richiedere la produzione di altri formati non a catalogo secondo esigenze particolari.
@@ -138,14 +138,14 @@
       <!-- Unlined Products -->
       <div class="product-card">
         <div class="card-image">
-          <img src="img/quaderno_unlined_main.jpg" 
-               alt="Quaderni Bianchi" 
+          <img src="https://www.art-production.it/imgs/slide/102/img_8290.jpg" 
+               alt="Quaderni con velina" 
                onclick="openGallery('unlined')">
         </div>
         <div class="card-content">
-          <h3>Libri e Quaderni Bianchi</h3>
+          <h3> Quaderni con velina</h3>
           <p>
-            Perfetti per disegno, arte e creatività. Carta di alta qualità per esprimere liberamente le tue idee.
+           I quaderni con velina sono disponibili nei formati standard visionabili sul PDF all'interno della pagina oppure su richiesta in qualsiasi formato, sia orizzontale che verticale con la possibilità di scegliere il numero di pagine interne e il fondo della pagina a seconda dell'utilizzo, quindi a righe, quadretti o liscio.
           </p>
           <button class="catalog-btn" onclick="showCatalog('unlined')">
             Visualizza Catalogo <i class="fas fa-arrow-right"></i>
@@ -156,14 +156,14 @@
       <!-- Lined Products -->
       <div class="product-card">
         <div class="card-image">
-          <img src="img/quaderno_lined_main.jpg" 
-               alt="Quaderni Rigati" 
+          <img src="https://www.art-production.it/imgs/slide/102/img_8290.jpg" 
+               alt="Quaderni senza velina" 
                onclick="openGallery('lined')">
         </div>
         <div class="card-content">
-          <h3>Libri e Quaderni Rigati</h3>
+          <h3>Quaderni senza velina</h3>
           <p>
-            Ideali per scrittura e appunti. Righe precise per una scrittura ordinata e professionale.
+            I quaderni senza velina sono disponibili nei formati standard visionabili sul PDF all'interno della pagina oppure su richiesta in qualsiasi formato, sia orizzontale che verticale con la possibilità di scegliere il numero di pagine interne e il fondo della pagina a seconda dell'utilizzo, quindi a righe, quadretti o liscio
           </p>
           <button class="catalog-btn" onclick="showCatalog('lined')">
             Visualizza Catalogo <i class="fas fa-arrow-right"></i>
@@ -181,10 +181,18 @@
 </div>
 
  <!-- Modal per Catalogo PDF -->
+ <!--<div id="pdfModal" class="pdf-modal">
+  <span class="close" onclick="closePDF()">&times;</span>
+  <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+</div> -->
+
+<!-- Modal per Catalogo PDF -->
 <div id="pdfModal" class="pdf-modal">
   <span class="close" onclick="closePDF()">&times;</span>
   <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+  <button id="backToProducts" onclick="goToProducts()">Torna ai Prodotti</button>
 </div>
+
 
    
     <!-- FAQ Section -->

@@ -357,10 +357,81 @@ function preloadImages() {
 // Initialize preloading
 preloadImages();
 
-function showCatalog(category) {
+ /*function showCatalog(category) {
     if (category === 'unlined') {
         window.open('catalogo_quaderni_SV.pdf', '_blank');
     } else if (category === 'lined') {
         window.open('catalogo_quaderni_CV1.pdf', '_blank');
     }
 }
+
+function goToProducts() {
+    closePDF(); // Ferme le PDF modal
+    const productsSection = document.getElementById('products');
+    if (productsSection) {
+        productsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+*/
+
+// Ouvrir le PDF dans le modal
+ /*function showCatalog(type) {
+    const pdfModal = document.getElementById('pdfModal');
+    const pdfFrame = document.getElementById('pdfFrame');
+
+    // Charger le PDF correspondant
+    pdfFrame.src = 'catalog-' + type + '.pdf';
+
+    // Afficher le modal
+    pdfModal.style.display = 'flex';
+}
+
+// Fermer le modal
+function closePDF() {
+    const pdfModal = document.getElementById('pdfModal');
+    const pdfFrame = document.getElementById('pdfFrame');
+
+    pdfModal.style.display = 'none';
+    pdfFrame.src = '';
+}
+
+// Naviguer vers la section Produits
+function goToProducts() {
+    closePDF(); // Ferme le PDF
+    setTimeout(() => { 
+        navigateToSection('products'); // Va à la section Produits
+    }, 100); // délai pour s'assurer que le modal est fermé
+} */
+
+   // Ouvre le PDF du catalogue
+function showCatalog(type) {
+    const pdfModal = document.getElementById('pdfModal');
+    const pdfFrame = document.getElementById('pdfFrame');
+
+    // Définir le PDF en fonction du type
+    if (type === 'unlined') {
+        pdfFrame.src = 'catalogo_quaderni_CV1.pdf';
+    } else if (type === 'lined') {
+        pdfFrame.src = 'catalogo_quaderni_SV.pdf';
+    }
+
+    pdfModal.style.display = 'flex';
+}
+
+// Ferme le PDF
+function closePDF() {
+    const pdfModal = document.getElementById('pdfModal');
+    const pdfFrame = document.getElementById('pdfFrame');
+
+    pdfModal.style.display = 'none';
+    pdfFrame.src = ''; // Reset pour recharger correctement
+}
+
+// Bouton retour aux produits
+function goToProducts() {
+    closePDF(); // Ferme le modal
+    const productsSection = document.getElementById('products');
+    productsSection.scrollIntoView({ behavior: 'smooth' });
+}
+ 
+

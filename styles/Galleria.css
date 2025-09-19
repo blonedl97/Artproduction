@@ -744,3 +744,21 @@ body {
   .nav-links {
     display: none; /* Cache la nav desktop */
   }
+
+  /* Footer mobile */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr; /* une seule colonne */
+    text-align: center;         /* centrer le texte et les icônes */
+    gap: 2rem;
+  }
+
+  .social-links {
+    justify-content: center; /* centre les icônes réseaux sociaux */
+  }
+
+  .footer-logo {
+    justify-content: center; /* centre le logo */
+  }
+}
+}
