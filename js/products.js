@@ -250,7 +250,9 @@ function closeModal() {
     "https://www.art-production.it/imgs/gallery/19/quad-cv_9a.jpg",
     "https://www.art-production.it/imgs/gallery/19/quad-cv_9b.jpg"];
     } else if (category === 'lined') {
-        images = [ "https://www.art-production.it/imgs/gallery/20/quad-sv_1a.jpg",
+        images = [ 
+   "https://www.art-production.it/imgs/gallery/20/quad-sv_7b.jpg",
+    "https://www.art-production.it/imgs/gallery/20/quad-sv_1a.jpg",
    "https://www.art-production.it/imgs/gallery/20/quad-sv_1b.jpg",
    "https://www.art-production.it/imgs/gallery/20/quad-sv_2a.jpg",
    "https://www.art-production.it/imgs/gallery/20/quad-sv_2b.jpg",
@@ -263,8 +265,7 @@ function closeModal() {
    "https://www.art-production.it/imgs/gallery/20/quad-sv_6a.jpg",
    "https://www.art-production.it/imgs/gallery/20/quad-sv_6b.jpg",
    "https://www.art-production.it/imgs/gallery/20/quad-sv_7a.jpg",
-   "https://www.art-production.it/imgs/gallery/20/quad-sv_7b.jpg"
-];
+        ]
     }
 
     images.forEach(src => {
