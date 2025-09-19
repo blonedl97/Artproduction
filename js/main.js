@@ -406,18 +406,26 @@ function goToProducts() {
    // Ouvre le PDF du catalogue
 
  function showCatalog(type) {
-    const pdfModal = document.getElementById('pdfModal');
-    const pdfFrame = document.getElementById('pdfFrame');
-
-    // Définir le nom correct selon le type
     let pdfFile = '';
     if(type === 'unlined') pdfFile = 'catalogo_quaderni_CV1.pdf';
     if(type === 'lined') pdfFile = 'catalogo_quaderni_SV.pdf';
 
-    pdfFrame.src = pdfFile;
-    pdfModal.style.display = 'flex';
+    // Détection mobile simple
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if(isMobile) {
+        // Sur mobile : ouvrir le PDF dans un nouvel onglet
+        window.open(pdfFile, '_blank');
+    } else {
+        // Sur desktop : ouvrir le PDF dans le modal
+        const pdfModal = document.getElementById('pdfModal');
+        const pdfFrame = document.getElementById('pdfFrame');
+        pdfFrame.src = pdfFile;
+        pdfModal.style.display = 'flex';
+    }
 }
 
+// Fonction pour fermer le modal PDF
 function closePDF() {
     const pdfModal = document.getElementById('pdfModal');
     const pdfFrame = document.getElementById('pdfFrame');
@@ -425,9 +433,10 @@ function closePDF() {
     pdfModal.style.display = 'none';
 }
 
+// Bouton "Torna ai Prodotti" pour desktop
 function goToProducts() {
     closePDF();
-    document.getElementById('products').scrollIntoView({behavior: 'smooth'});
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
 }
 
 
