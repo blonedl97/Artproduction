@@ -1163,8 +1163,8 @@ section {
 }
 
 #pdfModal iframe {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 80vh;
     max-width: 800px;  /* pour desktop */
     max-height: 90%;
     border-radius: 8px;
@@ -1173,7 +1173,7 @@ section {
 @media screen and (max-width: 768px) {
     #pdfModal iframe {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         border-radius: 0;
     }
 }
@@ -1196,6 +1196,7 @@ body.modal-open {
 }
 
 
+
 /* Bloquer tout débordement horizontal */
 body, html {
     overflow-x: hidden;
@@ -1204,13 +1205,16 @@ body, html {
 /* Hero slider pour mobile */
 @media (max-width: 768px) {
     .slider-layer {
-        width: 100% !important; /* chaque layer prend exactement 100% du viewport */
+        width: calc(100% * 6) /*100% !important*/; /* chaque layer prend exactement 100% du viewport */
         flex-wrap: nowrap;
+        /*left: 0;*/
     }
 
     .slider-layer img {
         width: 100%; /* chaque image prend toute la largeur de l’écran */
         height: auto;
+        height: 100%;
+        object-fit: cover;
     }
 
     .hero-slider {
