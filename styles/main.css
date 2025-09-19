@@ -1204,7 +1204,7 @@ section {
 }
 
 /* PDF Modal */
-#pdfModal {
+/* #pdfModal {
     position: fixed;
     top: 0;
     left: 0;
@@ -1215,19 +1215,20 @@ section {
     justify-content: center;
     align-items: center;
     z-index: 10000;
-    padding: 1rem; /* espace intérieur pour mobile */
+    padding: 0.5rem; /* espace intérieur pour mobile */
     box-sizing: border-box;
+    overflow: auto;
 }
 
-#pdfModal iframe {
+/*#pdfModal iframe {
     width: 100%;   /* prend toute la largeur */
     height: 100%;  /* prend toute la hauteur */
     max-width: 800px; /* limite sur desktop */
     max-height: 90%;
     border-radius: 8px;
-}
+} 
 
-#pdfModal .close {
+/*#pdfModal .close {
     position: absolute;
     top: 15px;
     right: 20px;
@@ -1237,7 +1238,7 @@ section {
     z-index: 2;
 }
 
-#pdfModal #backToProducts {
+/*#pdfModal #backToProducts {
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -1251,16 +1252,50 @@ section {
     z-index: 2;
 }
 
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
     #pdfModal iframe {
         width: 100%;
         height: 100%;
         border-radius: 0;
     }
-    #pdfModal #backToProducts {
+   /* #pdfModal #backToProducts {
         bottom: 15px;
         right: 15px;
         padding: 8px 12px;
         font-size: 0.8rem;
+    }
+}
+*/
+
+
+
+#pdfModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    overflow: auto; /* permet de scroller sur mobile */
+    padding: 0.5rem;
+}
+
+#pdfModal iframe {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;  /* pour desktop */
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    #pdfModal iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
     }
 }

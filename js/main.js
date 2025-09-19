@@ -404,34 +404,30 @@ function goToProducts() {
 } */
 
    // Ouvre le PDF du catalogue
-function showCatalog(type) {
+
+ function showCatalog(type) {
     const pdfModal = document.getElementById('pdfModal');
     const pdfFrame = document.getElementById('pdfFrame');
 
-    // Définir le PDF en fonction du type
-    if (type === 'unlined') {
-        pdfFrame.src = 'catalogo_quaderni_CV1.pdf';
-    } else if (type === 'lined') {
-        pdfFrame.src = 'catalogo_quaderni_SV.pdf';
-    }
+    // Définir le nom correct selon le type
+    let pdfFile = '';
+    if(type === 'unlined') pdfFile = 'catalogo_quaderni_CV1.pdf';
+    if(type === 'lined') pdfFile = 'catalogo_quaderni_SV.pdf';
 
+    pdfFrame.src = pdfFile;
     pdfModal.style.display = 'flex';
 }
 
-// Ferme le PDF
 function closePDF() {
     const pdfModal = document.getElementById('pdfModal');
     const pdfFrame = document.getElementById('pdfFrame');
-
+    pdfFrame.src = ''; // reset pour libérer la mémoire
     pdfModal.style.display = 'none';
-    pdfFrame.src = ''; // Reset pour recharger correctement
 }
 
-// Bouton retour aux produits
 function goToProducts() {
-    closePDF(); // Ferme le modal
-    const productsSection = document.getElementById('products');
-    productsSection.scrollIntoView({ behavior: 'smooth' });
+    closePDF();
+    document.getElementById('products').scrollIntoView({behavior: 'smooth'});
 }
- 
+
 
