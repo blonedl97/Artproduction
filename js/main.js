@@ -445,3 +445,13 @@ document.body.classList.add("modal-open");
 
 // Quand tu fermes la lightbox ou le catalogue
 document.body.classList.remove("modal-open");
+
+
+
+function goToProducts() {
+    const pdfModal = document.getElementById('pdfModal');
+    pdfModal.style.display = 'none';
+    
+    // Scroll vers la section produits
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+}

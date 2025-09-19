@@ -300,9 +300,9 @@ function showCatalog(category) {
     const pdfFrame = document.getElementById("pdfFrame");
 
     if (category === 'unlined') {
-        pdfFrame.src = "catalogo_unlined.pdf";
+        pdfFrame.src = "catalogo_quaderni_CV1.pdf";
     } else if (category === 'lined') {
-        pdfFrame.src = "catalogo_lined.pdf";
+        pdfFrame.src = "catalogo_quaderni_SV_lined.pdf";
     }
 
     pdfModal.style.display = "block";
@@ -313,4 +313,13 @@ function closePDF() {
     const pdfFrame = document.getElementById("pdfFrame");
     pdfModal.style.display = "none";
     pdfFrame.src = "";
+}
+
+
+function goToProducts() {
+    const pdfModal = document.getElementById('pdfModal');
+    pdfModal.style.display = 'none';
+    
+    // Scroll vers la section produits
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
 }

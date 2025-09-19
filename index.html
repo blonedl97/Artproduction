@@ -147,12 +147,10 @@
           <p>
            I quaderni con velina sono disponibili nei formati standard visionabili sul PDF all'interno della pagina oppure su richiesta in qualsiasi formato, sia orizzontale che verticale con la possibilità di scegliere il numero di pagine interne e il fondo della pagina a seconda dell'utilizzo, quindi a righe, quadretti o liscio.
           </p>
-        <!---  <button class="catalog-btn" onclick="showCatalog('unlined')">
+         <button class="catalog-btn" onclick="showCatalog('unlined')">
             Visualizza Catalogo <i class="fas fa-arrow-right"></i>
-          </button> --->
-          <a href="Catalogo_quaderni_CV1.pdf" target="_blank" class="catalog-btn">
-  📂 Ouvrir le Catalogue
-</a>
+          </button> 
+         
         </div>
       </div>
 
@@ -170,7 +168,8 @@
           </p>
           <button class="catalog-btn" onclick="showCatalog('lined')">
             Visualizza Catalogo <i class="fas fa-arrow-right"></i>
-          </button>
+          </button> 
+
         </div>
       </div>
     </div>
@@ -189,7 +188,7 @@
 <div id="pdfModal" class="pdf-modal">
   <span class="close" onclick="closePDF()">&times;</span>
   <iframe id="pdfFrame" src="" frameborder="0"></iframe>
-  <button id="backToProducts" onclick="goToProducts()">Torna ai Prodotti</button>
+  <button id="backToProducts" class="back-btn" onclick="gotoproducts">Torna ai Prodotti</button>
 </div>
 
 
