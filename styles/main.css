@@ -1097,7 +1097,7 @@ section {
 /* Chaque layer */
 .slider-layer {
   display: flex;
-  width: calc(100% * 6); /* 6 images par layer */
+  width: /*calc(100% * 6); /* 6 images par layer */
   height: 100%;
   position: absolute;
   top: 0;
@@ -1105,8 +1105,9 @@ section {
 }
 
 .slider-layer img {
-  width: calc(100% / 6); /* chaque image prend 1/6 du layer */
-  height: 100%;
+  width: 100%/*calc(100% / 6)*/; /* chaque image prend 1/6 du layer */
+  /*height: 100%;*/
+  flex-shrink: 0;
   object-fit: cover;
 }
 
