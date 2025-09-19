@@ -513,6 +513,23 @@
 .nav-mobile.show {
   display: block;
 }
+
+/* Cacher le bouton burger sur desktop */
+.mobile-menu-btn {
+  display: none;
+}
+
+/* Afficher seulement sur mobile */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; /* Cache la nav desktop */
+  }
+}
+
     </style>
 </head>
 <body>
@@ -527,6 +544,11 @@
                     <i class="fas fa-book-open"></i>
                 <h1>Art Production</h1>
             </div>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                     <i class="fas fa-bars"></i>
+            </button>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#products">Prodotti</a></li>
@@ -1009,9 +1031,13 @@
         updateEstimation();
 
         
-function toggleMobileMenu() {
+/*function toggleMobileMenu() {
   const menu = document.getElementById("nav-mobile");
   menu.style.display = menu.style.display === "block" ? "none" : "block";
+} */
+function toggleMobileMenu() {
+  const menu = document.getElementById("nav-mobile");
+  menu.classList.toggle("show");
 }
 
 

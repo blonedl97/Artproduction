@@ -363,3 +363,8 @@ const lazyLoadImages = () => {
 
 // Initialize lazy loading
 document.addEventListener('DOMContentLoaded', lazyLoadImages);
+
+function toggleMobileMenu() {
+  const menu = document.getElementById("nav-mobile");
+  menu.classList.toggle("show");
+}
