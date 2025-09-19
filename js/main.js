@@ -61,7 +61,7 @@ function toggleLanguageMenu() {
 }
 
 // Quote calculator functionality
-function calculateQuote() {
+/*function calculateQuote() {
     const form = document.getElementById('quoteForm');
     const formData = new FormData(form);
     
@@ -92,7 +92,7 @@ function calculateQuote() {
     priceDiv.textContent = `€${totalPrice.toFixed(2)}`;
     resultDiv.style.display = 'block';
     resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
+}*/
 
 // FAQ functionality
 function toggleFAQ(index) {
@@ -455,3 +455,4 @@ function goToProducts() {
     // Scroll vers la section produits
     document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
 }
+*/

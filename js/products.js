@@ -114,7 +114,7 @@ function initializeProducts() {
 // ===============================
 // Prévisualisation produits
 // ===============================
-function displayProductPreviews() {
+/*function displayProductPreviews() {
     const unlinedPreview = document.getElementById('unlinedPreview');
     const linedPreview = document.getElementById('linedPreview');
     
@@ -135,6 +135,36 @@ function displayProductPreviews() {
         </div>
     `).join('');
 }
+*/ 
+
+
+function displayProductPreviews() {
+    const unlinedPreview = document.getElementById('unlinedPreview');
+    const linedPreview = document.getElementById('linedPreview');
+    
+    const unlinedProducts = products.filter(p => p.category === 'unlined').slice(0, 4);
+    const linedProducts = products.filter(p => p.category === 'lined').slice(0, 4);
+    
+    if (unlinedPreview) {
+        unlinedPreview.innerHTML = unlinedProducts.map(product => `
+            <div class="preview-item" onclick="openProductModal('${product.id}')">
+                <img src="${product.image}" alt="${product.name.it}" loading="lazy">
+                <div class="preview-overlay"></div>
+            </div>
+        `).join('');
+    }
+
+    if (linedPreview) {
+        linedPreview.innerHTML = linedProducts.map(product => `
+            <div class="preview-item" onclick="openProductModal('${product.id}')">
+                <img src="${product.image}" alt="${product.name.it}" loading="lazy">
+                <div class="preview-overlay"></div>
+            </div>
+        `).join('');
+    }
+}
+
+
 
 // ===============================
 // Galerie Produits
