@@ -440,3 +440,8 @@ function goToProducts() {
 }
 
 
+// Quand tu ouvres la lightbox ou le catalogue
+document.body.classList.add("modal-open");
+
+// Quand tu fermes la lightbox ou le catalogue
+document.body.classList.remove("modal-open");

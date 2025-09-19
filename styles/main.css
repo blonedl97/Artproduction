@@ -1,4 +1,4 @@
- corrige/* Reset and Base Styles */
+corrige  corrige/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -1176,4 +1176,21 @@ section {
         height: 100%;
         border-radius: 0;
     }
+}
+
+/* Section Styles */
+section {
+    padding: 5rem 0;
+    scroll-margin-top: 80px; /* évite que le header fixe recouvre le haut des sections */
+}
+
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 100px; /* un peu plus pour mobile si le header est plus grand */
+    }
+}
+
+/* Bloquer le scroll du body quand une modale est ouverte */
+body.modal-open {
+    overflow: hidden;
 }
