@@ -1254,3 +1254,10 @@ img, video, iframe, .container, section {
 }
 
 
+@media (max-width: 768px) {
+  .hero-content {
+    margin-top: 20vh; /* soulève le texte */
+  }
+}
+
+
